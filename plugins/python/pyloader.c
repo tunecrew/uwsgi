@@ -22,7 +22,7 @@ PyMethodDef uwsgi_eventfd_write_method[] = { {"uwsgi_eventfd_write", py_eventfd_
 void set_dyn_pyhome(char *home, uint16_t pyhome_len) {
 
 
-	char venv_version[15];
+	char venv_version[30];
 	PyObject *site_module;
 
 	PyObject *pysys_dict = get_uwsgi_pydict("sys");
