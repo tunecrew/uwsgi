@@ -1401,7 +1401,7 @@ except NameError:
         exec(code, up)
 
 
-	def get_plugin_up(path):
+def get_plugin_up(path):
     up = {}
     if os.path.isfile(path):
         bname = os.path.basename(path)
