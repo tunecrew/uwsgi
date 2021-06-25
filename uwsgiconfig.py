@@ -1401,7 +1401,7 @@ except NameError:
         exec(code, up)
 
 
-def get_plugin_up(path):
+	def get_plugin_up(path):
     up = {}
     if os.path.isfile(path):
         bname = os.path.basename(path)
@@ -1412,7 +1412,8 @@ def get_plugin_up(path):
         if not path:
             path = '.'
     elif os.path.isdir(path):
-        execfile('%s/uwsgiplugin.py' % path, up)
+        uwsgi_plugin = open('%s/uwsgiplugin.py' % path, "rb").read()
+        exec(uwsgi_plugin, up)
     else:
         print("Error: unable to find directory '%s'" % path)
         sys.exit(1)
