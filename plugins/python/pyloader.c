@@ -46,7 +46,7 @@ void set_dyn_pyhome(char *home, uint16_t pyhome_len) {
                 PyDict_SetItemString(pysys_dict, "exec_prefix", venv_path);
 
                 venv_version[14] = 0;
-                if (snprintf(venv_version, 15, "/lib/python%d.%d", PY_MAJOR_VERSION, PY_MINOR_VERSION) == -1) {
+                if (snprintf(venv_version, 16, "/lib/python%d.%d", PY_MAJOR_VERSION, PY_MINOR_VERSION) == -1) {
                         return;
                 }
 
